@@ -78,8 +78,8 @@ export async function GET(request: Request) {
         studentId: record.studentId,
         rollNo: studentData.rollNo || "N/A",
         name: studentData.name || "Unknown",
-        standard: studentData.currentStandard || "N/A",
-        class: studentData.currentClass || "N/A",
+        standard: studentData.Standard || "N/A",
+        class: studentData.Class || "N/A",
         reason: record.reason,
       };
     });
