@@ -14,7 +14,7 @@ const nextConfig: NextConfig = {
         source: "/:path*",
         headers: [
           { key: "Access-Control-Allow-Credentials", value: "true" },
-          { key: "Access-Control-Allow-Origin", value: "http://localhost:3000" }, // Your frontend origin
+          { key: "Access-Control-Allow-Origin", value: "https://talod-tapovan.vercel.app" }, // Your frontend origin
           {
             key: "Access-Control-Allow-Methods",
             value: "GET,DELETE,PATCH,POST,PUT,OPTIONS",
@@ -32,7 +32,7 @@ const nextConfig: NextConfig = {
     return [
       {
         source: "/api/:path*",
-        destination: "http://localhost:3001/:path*",
+        destination: "https://talod-api.vercel.app/:path*",
       },
     ];
   },
