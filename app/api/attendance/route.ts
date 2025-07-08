@@ -80,8 +80,8 @@ export async function POST(request: NextRequest) {
         })
       )
     );
-    const cacheKey = `attendance:${standard}:${classParam}`;
-    await redis.del(cacheKey);
+    // const cacheKey = `attendance:${standard}:${classParam}`;
+    // await redis.del(cacheKey);
 
     return NextResponse.json(
       { success: true, message: "Attendance marked successfully" },
