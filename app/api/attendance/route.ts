@@ -56,7 +56,7 @@ export async function POST(request: NextRequest) {
 
     const attendanceRecords = attendance.map((record) => ({
       date: new Date(date),
-      standard: Number.parseInt(standard),
+      standard: (standard),
       class: classParam,
       studentId: record.studentId,
       status: record.status,
@@ -142,7 +142,7 @@ export async function GET(req: NextRequest, res: NextResponse) {
   try {
     const result = await prisma.attendance.findMany({
       where: {
-        standard: Number(standard),
+        standard: (standard),
         class: className as string,
         date: {
           gte: startDate,
