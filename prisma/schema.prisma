@@ -19,7 +19,7 @@ model Attendance {
  
   studentId Int
   status    String   // "P" for Present, "A" for Absent
-  standard  Int
+  standard  String
   class     String
   reason String?
 
